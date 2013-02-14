@@ -1,0 +1,26 @@
+// Flex box
+.mw_flex_box {
+ @include display-box;
+ @include box-orient(horizontal);
+ @include box-align(stretch);
+ .mw_flex_box_item_1 {
+   display: block;
+   @include box-flex(1);
+ }
+ .mw_flex_box_item_2 {
+   display: block;
+   @include box-flex(2);
+ }
+ .mw_flex_box_item_3 {
+   display: block;
+   @include box-flex(3);
+ }
+ .mw_flex_box_item_4 {
+   display: block;
+   @include box-flex(4);
+ }
+ .mw_flex_box_item_5 {
+   display: block;
+   @include box-flex(5);
+ }
+}
