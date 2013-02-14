@@ -1,3 +1,33 @@
-footer._footer {
+.mw_footer {
+  background-color: $dark_red;
+  text-align: center;
+  padding: 10px;
 
+  .mw_social,
+  .mw_links,
+  .mw_copyright {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  .mw_social_links {
+    display: block;
+  }
+
+  .mw_footer_link {
+    color: white;
+    display: inline-block;
+    padding-left: 10px;
+
+    &:not(:last-of-type):after {
+      content: "|";
+      padding-left: 10px;
+    }
+  }
+
+  .mw_copyright {
+    color: white;
+    font-size: 11px;
+    font-style: italic;
+  }
 }

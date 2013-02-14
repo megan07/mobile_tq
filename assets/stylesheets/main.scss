@@ -4,6 +4,9 @@
 // Base file contains all the global styles
 @import "globals/_base";
 
+//Lib file contains a library of classes and styles
+@import "globals/_lib";
+
 // File for global Uranium stylings
 @import "globals/_uranium.scss";
 

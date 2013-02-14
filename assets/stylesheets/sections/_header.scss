@@ -1,3 +1,45 @@
-header._header {
-  
+.mw_header {
+  padding: 10px;
+  background-color: $light_grey;
+  overflow: hidden;
+  .mw_logo {
+    float: left;
+  }
+
+  .mw_header_btns {
+    float: right;
+
+    .mw_search_btn,
+    .mw_accordion_btn {
+      background-color: white;
+      text-align: center;
+      color: $dark_grey;
+      border: 5px solid $dark_grey;
+      @include border-radius(20px);
+      padding: 0px 10px;
+    }
+
+    .mw_search_btn {
+      margin-right: 10px;
+    }
+  }
+}
+
+.mw_accordion_nav {
+  clear: both;
+  text-align: right;
+
+  .mw_topic_btn {
+    padding: 10px;
+    box-shadow: 0px 0px 10px #666;
+    font-weight: bold;
+    background-color: $light_grey;
+  }
+
+  .mw_subcat > a {
+    padding: 10px 20px;
+    box-shadow: 0px 0px 5px #666;
+    color: #666;
+    display: block;
+  }
 }
