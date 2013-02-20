@@ -16,6 +16,9 @@ $("./body") {
     insert("div", class: "mw_accordion_nav") {
       attributes(data-ur-toggler-component: "content", data-ur-id: "accordion")
     }
+
+    // insert an 'mw_content div after this for all pages'
+    insert_after("div", class: "mw_content")
   }
 
   $(".//div[@id='header']") {
