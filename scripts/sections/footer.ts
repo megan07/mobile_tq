@@ -1,10 +1,8 @@
 $("./body") {
   insert_bottom("div", class: "mw_footer") {
     insert("div", class: "mw_links")
-    insert("div", class: "mw_flex_box") {
-      insert("div", class: "mw_social mw_flex_box_item_1")
-      insert("div", class: "mw_copyright mw_flex_box_item_1")
-    }
+    insert("div", class: "mw_social")
+    insert("div", class: "mw_copyright")
   }
 
   $(".//div[@id='footer-right']//a[@id='itsoblog' or @id='twitter' or @id='linkedin']") {
