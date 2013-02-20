@@ -1,5 +1,52 @@
 .mw_home {
+
+  .mw_content {
+    padding: 10px;
+    background-color: $dark_grey;
+    overflow: hidden;
+  }
+
+  .mw_carousel {
+    background-color: white;
+    text-align: center;
+  }
+
   .mw_item img {
     width: 350px;
+  }
+
+  // home navigation buttons
+  .mw_home_nav {
+    padding: 10px;
+    width: 94%;
+    background: white;
+    color: $dark_grey;
+
+    > a {
+      color: $dark_grey;
+    }
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $light_grey;
+    }
+
+    &:first-of-type {
+      @include border-top-radius(5px);
+    }
+
+    &:last-of-type {
+      @include border-bottom-radius(5px);
+      margin-bottom: 10px;
+    }
+  }
+
+  .mw_home_subnav {
+    padding: 10px 0px 10px 20px;
+  }
+
+  .mw_home_ad {
+    float: right;
+    margin-left: 10px;
+    margin-top: 10px;
   }
 }
