@@ -4,11 +4,14 @@
 // Base file contains all the global styles
 @import "globals/_base";
 
-//Lib file contains a library of classes and styles
+// Lib file contains a library of classes and styles
 @import "globals/_lib";
 
 // File for global Uranium stylings
 @import "globals/_uranium.scss";
+
+// File for sprites
+@import "globals/_sprites";
 
 // Site wide variables
 @import "globals/_variables.scss";
