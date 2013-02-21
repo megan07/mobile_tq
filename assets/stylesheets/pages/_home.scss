@@ -15,38 +15,67 @@
     width: 350px;
   }
 
+  .mw_nav_container {
+    margin: 10px 0px;
+    @include border-radius(5px);
+    background: white;
+
+    > div:not(:last-of-type) {
+      border-bottom: 1px solid $light_grey;
+    }
+  }
+
   // home navigation buttons
   .mw_home_nav {
-    padding: 10px;
-    width: 94%;
-    background: white;
     color: $dark_grey;
+    display: block;
+    padding: 10px;
+    overflow: hidden;
+    clear: both;
+  }
 
-    > a {
-      color: $dark_grey;
-    }
+  .mw_home_subnav {
+    padding: 10px 10px 10px 20px;
+    overflow: hidden;
+    clear: both;
+    color: $dark_grey;
 
     &:not(:last-of-type) {
       border-bottom: 1px solid $light_grey;
     }
-
-    &:first-of-type {
-      @include border-top-radius(5px);
-    }
-
-    &:last-of-type {
-      @include border-bottom-radius(5px);
-      margin-bottom: 10px;
-    }
-  }
-
-  .mw_home_subnav {
-    padding: 10px 0px 10px 20px;
   }
 
   .mw_home_ad {
     float: right;
     margin-left: 10px;
     margin-top: 10px;
+  }
+
+  .mw_btn_text {
+    display: inline-block;
+    float: left;
+    max-width: 95%;
+  }
+
+  .sprites-arrow {
+    display: inline-block;
+    float: right;
+    margin-top: 6px;
+  }
+
+  .plus_minus {
+    display: inline-block;
+    float: right;
+    @include sprites-plus;
+    margin-top: 5px;
+  }
+
+  [data-ur-state='enabled'].mw_home_nav {
+      border-bottom: 1px solid $light_grey;
+
+    .plus_minus {
+      @include sprites-minus;
+      margin-top: 10px;
+    }
   }
 }

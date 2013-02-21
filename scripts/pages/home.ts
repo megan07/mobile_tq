@@ -16,44 +16,51 @@ $("./body") {
     }
 
     // HOME NAVIGATION
-    move_here("./ancestor::body//h2[@id='learnHow']") {
-      name("div")
-      add_class("mw_home_nav")
-    }
-    move_here("./ancestor::body//h2[@id='findOut']") {
-      name("div")
-      add_class("mw_home_nav")
-    }
-
-    // HOME NAVIGATION TOGGLERS
-    move_here("./ancestor::body//div[@id='capacity-management' or @id='performance-analysis']") {
-      attributes(data-ur-set: "toggler")
-      add_class("mw_home_nav")
-      $("./h2") {
+    insert("div", class: "mw_nav_container") {
+      // NAV LINKS
+      move_here("./ancestor::body//h2[@id='findOut' or @id='learnHow']") {
         name("div")
-        add_class("mw_button")
-        attributes(data-ur-toggler-component: "button")
-
-        $btn_text = fetch("./a/text()")
-      }
-
-      move_here("./div/a") {
-        add_class("mw_home_subnav")
-        attributes(data-ur-toggler-component: "content")
-        text() {
-          append(" Home")
+        $("./a") {
+          add_class("mw_home_nav")
+          wrap_text_children("div", class: "mw_btn_text")
+          insert("div", class: "sprites-arrow")
         }
       }
+      // HOME NAVIGATION TOGGLERS
+      move_here("./ancestor::body//div[@id='capacity-management' or @id='performance-analysis']") {
+        attributes(data-ur-set: "toggler")
+        $("./h2") {
+          name("div")
+          add_class("mw_home_nav")
+          attributes(data-ur-toggler-component: "button")
 
-      move_here("./ul//a") {
-        add_class("mw_home_subnav")
-        attributes(data-ur-toggler-component: "content")
+          $btn_text = fetch("./a/text()")
+        }
+
+        move_here("./div/a") {
+          add_class("mw_home_subnav")
+          attributes(data-ur-toggler-component: "content")
+          text() {
+            append(" Home")
+          }
+          wrap_text_children("div", class: "mw_btn_text")
+          insert("div", class: "sprites-arrow")
+        }
+
+        move_here("./ul//a") {
+          add_class("mw_home_subnav")
+          attributes(data-ur-toggler-component: "content")
+          wrap_text_children("div", class: "mw_btn_text")
+          insert("div", class: "sprites-arrow")
+        }
+        $("./div[contains(@class, 'mw_home_nav')]") {
+          insert("span", $btn_text, class: "mw_btn_text")
+          insert("div", class: "plus_minus")
+        }
+        remove("./ul")
       }
-      $("./div[contains(@class, 'mw_button')]") {
-        text($btn_text)
-      }
-      remove("./ul")
     }
+
     move_here("./ancestor::body//div[contains(@id, 'content-ad')]/a") {
       add_class("mw_home_ad")
     }
