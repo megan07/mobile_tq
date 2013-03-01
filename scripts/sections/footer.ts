@@ -7,6 +7,20 @@ $("./body") {
 
   $(".//div[@id='footer-right']//a[@id='itsoblog' or @id='twitter' or @id='linkedin']") {
     add_class("mw_social_link")
+    remove("./span")
+
+    $("./self::a[@id='itsoblog']") {
+      add_class("sprites-blog")
+    }
+
+    $("./self::a[@id='twitter']") {
+      add_class("sprites-twitter")
+    }
+
+    $("./self::a[@id='linkedin']") {
+      add_class("sprites-linkedin")
+    }
+
     move_to("./ancestor::body/div[@class='mw_footer']//div[contains(@class, 'mw_social')]")
   }
 

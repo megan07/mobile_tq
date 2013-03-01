@@ -1,61 +1,118 @@
 $sprites-url: url("/_moovweb_local_assets_/images/sprites.png");
 
-$sprites-width: 26px;
-$sprites-height: 54px;
+$sprites-width: 72px;
+$sprites-height: 234px;
 
 $sprites-arrow-x: 0px;
 $sprites-arrow-y: 0px;
 $sprites-arrow-width: 8px;
 $sprites-arrow-height: 11px;
 
+$sprites-blog-x: 0px;
+$sprites-blog-y: -11px;
+$sprites-blog-width: 30px;
+$sprites-blog-height: 30px;
+
+$sprites-linkedin-x: 0px;
+$sprites-linkedin-y: -41px;
+$sprites-linkedin-width: 36px;
+$sprites-linkedin-height: 30px;
+
 $sprites-minus-x: 0px;
-$sprites-minus-y: -11px;
+$sprites-minus-y: -71px;
 $sprites-minus-width: 13px;
 $sprites-minus-height: 3px;
 
 $sprites-plus-x: 0px;
-$sprites-plus-y: -14px;
+$sprites-plus-y: -74px;
 $sprites-plus-width: 13px;
 $sprites-plus-height: 13px;
 
+$sprites-twitter-x: 0px;
+$sprites-twitter-y: -87px;
+$sprites-twitter-width: 30px;
+$sprites-twitter-height: 30px;
+
 @mixin sprites-arrow() {
   background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px 0px;
-  @include background-size(13px 27px);
+  @include background-size(36px 117px);
   width: 8px;
   height: 11px;
 }
 
-@mixin sprites-minus() {
+@mixin sprites-blog() {
   background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -11px;
-  @include background-size(13px 27px);
+  @include background-size(36px 117px);
+  width: 30px;
+  height: 30px;
+}
+
+@mixin sprites-linkedin() {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -41px;
+  @include background-size(36px 117px);
+  width: 36px;
+  height: 30px;
+}
+
+@mixin sprites-minus() {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -71px;
+  @include background-size(36px 117px);
   width: 13px;
   height: 3px;
 }
 
 @mixin sprites-plus() {
-  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -14px;
-  @include background-size(13px 27px);
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -74px;
+  @include background-size(36px 117px);
   width: 13px;
   height: 13px;
 }
 
+@mixin sprites-twitter() {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -87px;
+  @include background-size(36px 117px);
+  width: 30px;
+  height: 30px;
+}
+
 .sprites-arrow {
   background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px 0px;
-  @include background-size(13px 27px);
+  @include background-size(36px 117px);
   width: 8px;
   height: 11px;
 }
 
-.sprites-minus {
+.sprites-blog {
   background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -11px;
-  @include background-size(13px 27px);
+  @include background-size(36px 117px);
+  width: 30px;
+  height: 30px;
+}
+
+.sprites-linkedin {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -41px;
+  @include background-size(36px 117px);
+  width: 36px;
+  height: 30px;
+}
+
+.sprites-minus {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -71px;
+  @include background-size(36px 117px);
   width: 13px;
   height: 3px;
 }
 
 .sprites-plus {
-  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -14px;
-  @include background-size(13px 27px);
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -74px;
+  @include background-size(36px 117px);
   width: 13px;
   height: 13px;
+}
+
+.sprites-twitter {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -87px;
+  @include background-size(36px 117px);
+  width: 30px;
+  height: 30px;
 }
