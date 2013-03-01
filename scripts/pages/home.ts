@@ -60,10 +60,6 @@ $("./body") {
         remove("./ul")
       }
     }
-
-    move_here("./ancestor::body//div[contains(@id, 'content-ad')]/a") {
-      add_class("mw_home_ad")
-    }
   }
 
   remove(".//div[@id='pageContainerHome']")
