@@ -45,27 +45,21 @@
     }
   }
 
-  .mw_home_ad {
-    float: right;
-    margin-left: 10px;
-    margin-top: 10px;
-  }
-
   .mw_btn_text {
+    vertical-align: middle;
     display: inline-block;
-    width: 95%;
+    min-width: 95%;
   }
 
   .sprites-arrow {
+    vertical-align: middle;
     display: inline-block;
-    margin-top: 6px;
   }
 
   .plus_minus {
+    vertical-align: middle;
     display: inline-block;
-    float: right;
     @include sprites-plus;
-    margin-top: 5px;
   }
 
   [data-ur-state='enabled'].mw_home_nav {
@@ -73,7 +67,6 @@
 
     .plus_minus {
       @include sprites-minus;
-      margin-top: 10px;
     }
   }
 }
