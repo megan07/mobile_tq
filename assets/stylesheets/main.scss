@@ -2,23 +2,27 @@
 // @import "globals/_reset";
 
 // Base file contains all the global styles
-@import "globals/_base";
+@import "globals/_base.scss";
 
 // Lib file contains a library of classes and styles
-@import "globals/_lib";
+@import "globals/_lib.scss";
 
 // File for global Uranium stylings
 @import "globals/_uranium.scss";
 
 // File for sprites
-@import "globals/_sprites";
+@import "globals/_sprites.scss";
 
 // Site wide variables
 @import "globals/_variables.scss";
 
 // Header & Footer
-@import "sections/_header";
-@import "sections/_footer";
+@import "sections/_header.scss";
+@import "sections/_footer.scss";
+@import "sections/_subnav.scss";
 
 // Pages
-@import "pages/_home";
+@import "pages/_home.scss";
+
+// News pages
+@import "pages/news/_tts.scss";

@@ -22,9 +22,11 @@ $("/html") {
 
   add_assets()
 
-  @import sections/header.ts
-  @import sections/footer.ts
+  @import "sections/header.ts"
+  @import "sections/footer.ts"
+  @import "sections/subnav.ts"
 
-  @import mappings.ts
+  @import "page_type.ts"
+  @import "mappings.ts"
 }
 
