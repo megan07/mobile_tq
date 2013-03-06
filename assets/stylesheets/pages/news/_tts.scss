@@ -1,0 +1,40 @@
+.mw_tts_home {
+
+  .mw_content {
+    padding: 10px;
+    // background-color: $dark_grey;
+    overflow: hidden;
+  }
+
+  #bread {
+    font-size: 12px;
+
+    a {
+      color: $dark_red;
+    }
+
+    .mw_chevron {
+      color: $dark_grey;
+    }
+  }
+
+  .mw_title {
+    color: $dark_grey;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .mw_register {
+    @include box-shadow(-2px 2px 6px #333333);
+    @include border-radius(5px);
+    padding: 5px;
+    color: #333333;
+    margin: 10px 0px;
+    display: inline-block;
+  }
+
+  .mw_video {
+    margin: 10px 0px;
+    text-align: center;
+  }
+}

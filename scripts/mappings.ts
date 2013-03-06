@@ -17,13 +17,18 @@ match($status) {
   with(/200/) {
     log("--> STATUS: 200")
 
-    match($path) {
-      with(/^\/$|^\/\?/) {
+    match($page_type) {
+
+      # Home page
+      with("home") {
         log("--> Importing pages/home.ts in mappings.ts")
-        @import pages/home.ts
+        @import "pages/home.ts"
       }
-      else() {
-        log("--> No page match in mappings.ts")
+
+      # News pages
+      with("tts") {
+        log("--> Importing pages/news/tts.ts in mappings.ts")
+        @import "pages/news/tts.ts"
       }
     }
   }
@@ -31,7 +36,7 @@ match($status) {
   else() {
     # not 200 or 302 response status
     log("--> STATUS: " + $status + " assuming its an error code pages/error.ts")
-    @import pages/error.ts
+    @import "pages/error.ts"
   }
 
 }
