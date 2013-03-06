@@ -62,7 +62,7 @@
     @include sprites-plus;
   }
 
-  [data-ur-state='enabled'].mw_home_nav {
+  .mw_home_nav[data-ur-state='enabled'] {
       border-bottom: 1px solid $light_grey;
 
     .plus_minus {
