@@ -1,0 +1,19 @@
+.mw_news {
+  #bread {
+    font-size: 12px;
+
+    a {
+      color: $dark_red;
+    }
+
+    .mw_chevron {
+      color: $dark_grey;
+    }
+  }
+
+  .mw_title {
+    color: $dark_grey;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}

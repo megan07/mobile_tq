@@ -11,7 +11,20 @@ match($path) {
     $page_type = "news"
 
     with(/technology-summit/) {
-      $page_type = "tts"
+      $page_type {
+        append("_tts")
+      }
+
+      with(/tts-registration/) {
+        $page_type {
+          append("_registration")
+        }
+      }
+      with(/agenda/) {
+        $page_type {
+          append("_agenda")
+        }
+      }
     }
   }
   else() {

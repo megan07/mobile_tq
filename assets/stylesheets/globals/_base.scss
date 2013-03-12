@@ -38,3 +38,15 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 
+form input[type="text"] {
+  width: 99%;
+  font-size: 15px;
+  line-height: 1.5em;
+  @include border-radius(5px);
+  @include box-shadow(inset -1px -1px 1px #eee)
+}
+
+form select {
+  max-width: 99%;
+  font-size: 17px;
+}

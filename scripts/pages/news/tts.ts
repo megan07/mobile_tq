@@ -3,17 +3,6 @@ $("./body") {
   add_class("mw_tts_home")
 
   $("./div[@class='mw_content']") {
-    move_here("./ancestor::body//div[@id='innerWrapper']/div[@id='centerCol']/div[@id='bread']") {
-      wrap_text_children("span", class: "mw_chevron") {
-        text() {
-          replace(/>>/, "»")
-        }
-      }
-    }
-    move_here("./ancestor::body//div[@id='innerWrapper']/div[@id='centerCol']//h1") {
-      add_class("mw_title")
-    }
-
     move_here("./ancestor::body//div[@id='innerWrapper']/div[@id='centerCol']//td[@class='ttsMtxt']") {
       name("div")
       add_class("mw_tts_info")

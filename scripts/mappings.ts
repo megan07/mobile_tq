@@ -25,10 +25,26 @@ match($status) {
         @import "pages/home.ts"
       }
 
+      log("PAGE TYPE IS ", $page_type)
       # News pages
-      with("tts") {
-        log("--> Importing pages/news/tts.ts in mappings.ts")
-        @import "pages/news/tts.ts"
+      with(/news/) {
+        @import "pages/news/news.ts"
+
+        # TTS pages
+        with(/tts_agenda/) {
+          log("--> Importing pages/news/tts_agenda.ts in mappings.ts")
+          @import "pages/news/tts_agenda.ts"
+        }
+
+        with(/tts_registration/) {
+          log("--> Importing pages/news/tts_registration.ts in mappings.ts")
+          @import "pages/news/tts_registration.ts"
+        }
+
+        with(/tts/) {
+          log("--> Importing pages/news/tts.ts in mappings.ts")
+          @import "pages/news/tts.ts"
+        }
       }
     }
   }
