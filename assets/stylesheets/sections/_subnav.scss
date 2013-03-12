@@ -1,5 +1,5 @@
 .mw_subnav {
-  #active {
+  .mw_active_parent {
     padding: 10px;
     font-weight: bold;
     background-color: $light_grey;
@@ -30,7 +30,7 @@
     @include sprites-plus;
   }
 
-  #active[data-ur-state='enabled'] {
+  .mw_active_parent[data-ur-state='enabled'] {
       border-bottom: 1px solid $light_grey;
 
     .plus_minus {
