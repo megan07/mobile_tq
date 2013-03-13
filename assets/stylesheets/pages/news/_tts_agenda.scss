@@ -1,0 +1,41 @@
+.mw_tts_agenda {
+
+  .mw_content {
+    padding: 10px;
+    // background-color: $dark_grey;
+    overflow: hidden;
+  }
+
+  .mw_day_wrap {
+    @include border-radius(5px);
+    border: $dark_grey solid 1px;
+    background: $light_grey;
+    margin: 10px 0px;
+
+    .mw_date {
+      text-align: center;
+      width: 100%;
+      color: $dark_grey;
+      font-weight: bold;
+      padding: 5px;
+    }
+
+    .mw_time_block {
+      padding: 5px;
+      background: white;
+      border-bottom: $dark_grey solid 1px;
+      @include border-bottom-right-radius(5px);
+      @include border-bottom-left-radius(5px);
+
+      &:last-of-type {
+        border: none;
+      }
+    }
+
+    .mw_event_speaker {
+      text-align: right;
+    }
+  }
+
+
+}
