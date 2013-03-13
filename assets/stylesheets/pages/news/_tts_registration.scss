@@ -27,13 +27,13 @@
     .mw_input {
       vertical-align: middle;
       padding-left: 5px;
-      width: 66%;
+      width: 67%;
       display: inline-block;
     }
 
     textarea {
       height: 65px;
-      width: 99%;
+      width: 97%;
       margin: 5px 0px;
       @include border-radius(3px);
     }
@@ -42,12 +42,25 @@
   .mw_radio_labels {
     display: inline;
     padding-left: 2px;
-    padding-right: 10px;
+    padding-right: 5px;
   }
 
   .mw_side_note {
     font-size: 11px;
     color: $dark_red;
     text-align: right;
+    display: block;
+    line-height: 1.25em;
+    max-width: 75%;
+    float: right;
+  }
+
+  .mw_presubmit {
+    margin-top: 10px;
+    font-size: 11px;
+    color: $dark_grey;
+    text-align: center;
+    display: block;
+    line-height: 1.25em;
   }
 }

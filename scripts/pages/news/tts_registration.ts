@@ -42,7 +42,7 @@ $("./body") {
 
           $("./span") {
             remove("./@style")
-            add_class("mw_side_note")
+            add_class("mw_presubmit")
             move_to("./ancestor::div[contains(@class, 'mw_form_row')]", "bottom")
           }
 
@@ -79,6 +79,11 @@ $("./body") {
           $("./span") {
             remove("./@style")
             add_class("mw_side_note")
+
+            inner() {
+              replace(/<br>/, " ")
+            }
+
             move_to("./ancestor::div[contains(@class, 'mw_form_row')]", "bottom")
           }
 
