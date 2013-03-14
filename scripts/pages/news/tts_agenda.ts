@@ -14,6 +14,8 @@ $("./body") {
           remove("./@valign")
           add_class("mw_time")
           attributes(data-ur-toggler-component: "button", data-ur-id: "time_"+$index)
+          wrap_text_children("div", class: "mw_time_text")
+          insert("div", class: "time_plus_minus")
         }
 
         $("./td") {
@@ -34,13 +36,19 @@ $("./body") {
           }
 
           wrap_text_children("span") {
-            remove()
+            text() {
+              replace(/-/, "")
+            }
+
+            remove("./self::span[text()='  ']")
           }
         }
       }
 
       $("./td/strong") {
+        add_class("mw_date_text")
         wrap("div", class: "mw_date", data-ur-toggler-component: "button") {
+          insert("div", class: "date_plus_minus")
           move_to("./ancestor::div[1]") {
             add_class("mw_day_wrap")
             attributes(data-ur-set: "toggler", data-ur-id: "date_"+$index)

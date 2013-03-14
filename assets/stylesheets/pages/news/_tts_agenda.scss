@@ -7,35 +7,87 @@
   }
 
   .mw_day_wrap {
-    @include border-radius(5px);
-    border: $dark_grey solid 1px;
-    background: $light_grey;
     margin: 10px 0px;
+    border: $dark_grey solid 1px;
+    @include border-radius(5px);
 
     .mw_date {
+      @include linear-gradient(top, #eeeeee 0%, #b3b3b3 100%);
+      @include border-radius(5px);
       text-align: center;
-      width: 100%;
       color: $dark_grey;
       font-weight: bold;
       padding: 5px;
+
+      &[data-ur-state='enabled'] {
+        border-bottom: $dark_grey solid 1px;
+        @include border-bottom-right-radius(0px);
+        @include border-bottom-left-radius(0px);
+      }
     }
 
-    .mw_time_block {
-      padding: 5px;
-      background: white;
-      border-bottom: $dark_grey solid 1px;
-      @include border-bottom-right-radius(5px);
-      @include border-bottom-left-radius(5px);
+    .mw_time_wrap {
+      .mw_time {
+        border-bottom: $dark_grey solid 1px;
+        @include linear-gradient(top, #ffffff 0%, #dddddd 100%);
+        padding: 5px;
+      }
 
       &:last-of-type {
-        border: none;
+        .mw_time, .mw_events {
+          border-bottom: none;
+          @include border-bottom-right-radius(5px);
+          @include border-bottom-left-radius(5px);
+      
+          &.mw_time[data-ur-state='enabled'] {
+            border-bottom: $dark_grey solid 1px;
+            @include border-bottom-right-radius(0px);
+            @include border-bottom-left-radius(0px);
+          }
+        }
       }
+    }
+
+    .mw_events {
+      border-bottom: $dark_grey solid 1px;
+      background: white;
+      padding: 5px;
     }
 
     .mw_event_speaker {
       text-align: right;
+      margin-bottom: 10px;
     }
   }
 
+  .mw_date_text {
+    vertical-align: middle;
+    display: inline-block;
+    width: 95%;
+  }
+
+  .mw_time_text {
+    vertical-align: middle;
+    display: inline-block;
+    width: 94%;
+  }
+
+  [class$=plus_minus] {
+    vertical-align: middle;
+    display: inline-block;
+    @include sprites-plus;
+  }
+
+  .mw_date[data-ur-state='enabled'] {
+    .date_plus_minus {
+      @include sprites-minus;
+    }
+  }
+
+  .mw_time[data-ur-state='enabled'] {
+    .time_plus_minus {
+      @include sprites-minus;
+    }
+  }
 
 }

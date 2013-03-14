@@ -3,6 +3,9 @@
 match($content_type) {
   with(/html/) {
     replace(/fb:/, "fbn_") # Rewrite the xmlns facebook nodes before the html parser clobbers them
+
+    # ON TTS AGENDA PAGE, THERE IS AN HTML ERROR
+    replace(/<\/tr>(\n)?<\/tr>(\n?\s?)*<td/, "<\/tr><tr><td")
     
     # Force UTF-8 encoding. If you'd like to auto-detect the encoding,
     # simply remove the "UTF-8" argument.  e.g. html(){ ... }
